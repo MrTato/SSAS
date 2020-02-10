@@ -1,0 +1,167 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="a1934142-fa38-4670-8648-afbc8b454abb" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>MANTENIMIENTO DW</ID>
+  <Name>MANTENIMIENTO DW</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>DW</DataSourceID>
+  <Schema>
+    <xs:schema id="MANTENIMIENTO_x0020_DW" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="MANTENIMIENTO_x0020_DW" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="56db4fca-a44b-4923-957d-44c29f475e6f">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_Facts_Mantenimiento" msprop:design-time-name="51c65ab7-8a70-45f2-a8e5-8c9e02885a6b" msprop:DbTableName="Facts_Mantenimiento" msprop:FriendlyName="Facts_Mantenimiento" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id_mantenimiento" msprop:design-time-name="9638e927-13c5-4d64-8160-2c431b267b25" msprop:DbColumnName="id_mantenimiento" msprop:FriendlyName="id_mantenimiento" type="xs:int" />
+                  <xs:element name="id_equipo" msprop:design-time-name="9f9e734b-9fb8-498c-830a-ab12c6c9cef0" msprop:DbColumnName="id_equipo" msprop:FriendlyName="id_equipo" type="xs:int" />
+                  <xs:element name="id_tipo_salida" msprop:design-time-name="d5be9484-d926-411c-a21a-f86bdae009eb" msprop:DbColumnName="id_tipo_salida" msprop:FriendlyName="id_tipo_salida" type="xs:int" />
+                  <xs:element name="id_causa_salida" msprop:design-time-name="1f37ec42-9b31-4028-941b-4030cd4fa832" msprop:DbColumnName="id_causa_salida" msprop:FriendlyName="id_causa_salida" type="xs:int" />
+                  <xs:element name="duracion" msprop:design-time-name="75c29164-40cc-451e-b897-36f1eb738bf9" msprop:DbColumnName="duracion" msprop:FriendlyName="duracion" type="xs:double" minOccurs="0" />
+                  <xs:element name="costo" msprop:design-time-name="cd4f8585-800d-4aa7-b712-070d3c51ad59" msprop:DbColumnName="costo" msprop:FriendlyName="costo" type="xs:decimal" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dimension_Fechas" msprop:design-time-name="5d096d8b-6258-4841-9ae8-4f42cec7107a" msprop:DbTableName="Dimension_Fechas" msprop:FriendlyName="Dimension_Fechas" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id_mantenimiento" msprop:design-time-name="7783d86d-fa5d-4dae-a9f1-31039ec776f6" msprop:DbColumnName="id_mantenimiento" msprop:FriendlyName="id_mantenimiento" type="xs:int" />
+                  <xs:element name="fecha_hora_inicio" msprop:design-time-name="1e7ea57c-1bae-4091-965f-fbf35918f666" msprop:DbColumnName="fecha_hora_inicio" msprop:FriendlyName="fecha_hora_inicio" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="DAY_inicio" msprop:design-time-name="1665f512-c08d-4970-b644-0f13274fe3db" msprop:DbColumnName="DAY_inicio" msprop:FriendlyName="DAY_inicio" type="xs:int" minOccurs="0" />
+                  <xs:element name="MONTH_inicio" msprop:design-time-name="b1df67b8-2c1e-4ba8-a885-b2dfbc13e574" msprop:DbColumnName="MONTH_inicio" msprop:FriendlyName="MONTH_inicio" type="xs:int" minOccurs="0" />
+                  <xs:element name="YEAR_inicio" msprop:design-time-name="80957b6d-1f58-40fc-841f-8c653222418d" msprop:DbColumnName="YEAR_inicio" msprop:FriendlyName="YEAR_inicio" type="xs:int" minOccurs="0" />
+                  <xs:element name="WEEK_inicio" msprop:design-time-name="fa491384-2595-4e4a-a1c5-d556beac0c8f" msprop:DbColumnName="WEEK_inicio" msprop:FriendlyName="WEEK_inicio" type="xs:int" minOccurs="0" />
+                  <xs:element name="TRIMESTER_inicio" msprop:design-time-name="29a0dbc4-2e50-4ab6-89a5-de42e6b470f5" msprop:DbColumnName="TRIMESTER_inicio" msprop:FriendlyName="TRIMESTER_inicio" type="xs:int" minOccurs="0" />
+                  <xs:element name="fecha_hora_fin" msprop:design-time-name="cba43bc0-1967-4a4f-938a-7ab0b7359d00" msprop:DbColumnName="fecha_hora_fin" msprop:FriendlyName="fecha_hora_fin" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="DAY_fin" msprop:design-time-name="3de16866-bdbe-4240-a097-07bf5630a7ee" msprop:DbColumnName="DAY_fin" msprop:FriendlyName="DAY_fin" type="xs:int" minOccurs="0" />
+                  <xs:element name="MONTH_fin" msprop:design-time-name="5eac5573-ea9b-42bc-9fe3-9f337987f6ae" msprop:DbColumnName="MONTH_fin" msprop:FriendlyName="MONTH_fin" type="xs:int" minOccurs="0" />
+                  <xs:element name="YEAR_fin" msprop:design-time-name="f6e794ef-ea92-4b98-bcfb-aa2ad31906be" msprop:DbColumnName="YEAR_fin" msprop:FriendlyName="YEAR_fin" type="xs:int" minOccurs="0" />
+                  <xs:element name="WEEK_fin" msprop:design-time-name="17f37596-2202-48e4-9873-e8127dc181c0" msprop:DbColumnName="WEEK_fin" msprop:FriendlyName="WEEK_fin" type="xs:int" minOccurs="0" />
+                  <xs:element name="TRIMESTER_fin" msprop:design-time-name="6298f1b4-50e7-4de3-82d8-4fcb8f11a825" msprop:DbColumnName="TRIMESTER_fin" msprop:FriendlyName="TRIMESTER_fin" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dimension_Tipo_Salida" msprop:design-time-name="7b50a4ff-b74b-4991-b6c2-7622363d71a5" msprop:DbTableName="Dimension_Tipo_Salida" msprop:FriendlyName="Dimension_Tipo_Salida" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id_tipo_salida" msprop:design-time-name="0132acaa-cf67-4952-a625-f3e033eb79e0" msprop:DbColumnName="id_tipo_salida" msprop:FriendlyName="id_tipo_salida" type="xs:int" />
+                  <xs:element name="tipo_salida" msprop:design-time-name="4bad6cbc-60ef-47d2-ab0e-462592abff6a" msprop:DbColumnName="tipo_salida" msprop:FriendlyName="tipo_salida" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dimension_Causa_Salida" msprop:design-time-name="339a8dac-534d-407e-a8d6-b69b5a27712a" msprop:DbTableName="Dimension_Causa_Salida" msprop:FriendlyName="Dimension_Causa_Salida" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id_causa_salida" msprop:design-time-name="f02c151c-0485-48e4-8053-bfacebb68810" msprop:DbColumnName="id_causa_salida" msprop:FriendlyName="id_causa_salida" type="xs:int" />
+                  <xs:element name="causa_salida" msprop:design-time-name="139e2bfe-2845-4e68-8b53-a5427295b9a9" msprop:DbColumnName="causa_salida" msprop:FriendlyName="causa_salida" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dimension_Equipo" msprop:design-time-name="e9459f5e-9099-4c3d-80a6-6e44bbd58d14" msprop:DbTableName="Dimension_Equipo" msprop:FriendlyName="Dimension_Equipo" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id_equipo" msprop:design-time-name="7c78efae-4af7-41db-8137-683d7a05dd9e" msprop:DbColumnName="id_equipo" msprop:FriendlyName="id_equipo" type="xs:int" />
+                  <xs:element name="equipo" msprop:design-time-name="cfc742d6-72ab-41ba-8771-5122db78562b" msprop:DbColumnName="equipo" msprop:FriendlyName="equipo" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="id_tipo_equipo" msprop:design-time-name="736844c1-36aa-4217-b4e2-c6eb1e35079e" msprop:DbColumnName="id_tipo_equipo" msprop:FriendlyName="id_tipo_equipo" type="xs:int" />
+                  <xs:element name="tipo_equipo" msprop:design-time-name="68cc86e5-16bf-43a8-94c7-de5cd1aee44b" msprop:DbColumnName="tipo_equipo" msprop:FriendlyName="tipo_equipo" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dimension_Fechas" />
+          <xs:field xpath="id_mantenimiento" />
+        </xs:unique>
+        <xs:unique name="dbo_Dimension_Tipo_Salida_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dimension_Tipo_Salida" />
+          <xs:field xpath="id_tipo_salida" />
+        </xs:unique>
+        <xs:unique name="dbo_Dimension_Causa_Salida_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dimension_Causa_Salida" />
+          <xs:field xpath="id_causa_salida" />
+        </xs:unique>
+        <xs:unique name="dbo_Dimension_Equipo_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dimension_Equipo" />
+          <xs:field xpath="id_equipo" />
+        </xs:unique>
+        <xs:keyref name="FK_Facts_Mantenimiento_Dimension_Causa_Salida" refer="dbo_Dimension_Causa_Salida_Constraint1">
+          <xs:selector xpath=".//dbo_Facts_Mantenimiento" />
+          <xs:field xpath="id_causa_salida" />
+        </xs:keyref>
+        <xs:keyref name="FK_Facts_Mantenimiento_Dimension_Tipo_Salida" refer="dbo_Dimension_Tipo_Salida_Constraint1">
+          <xs:selector xpath=".//dbo_Facts_Mantenimiento" />
+          <xs:field xpath="id_tipo_salida" />
+        </xs:keyref>
+        <xs:keyref name="FK_Facts_Mantenimiento_Dimension_Fechas" refer="Constraint1">
+          <xs:selector xpath=".//dbo_Facts_Mantenimiento" />
+          <xs:field xpath="id_mantenimiento" />
+        </xs:keyref>
+        <xs:keyref name="FK_Facts_Mantenimiento_Dimension_Equipo" refer="dbo_Dimension_Equipo_Constraint1">
+          <xs:selector xpath=".//dbo_Facts_Mantenimiento" />
+          <xs:field xpath="id_equipo" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <MANTENIMIENTO_x0020_DW xmlns="" />
+  </Schema>
+</DataSourceView>
